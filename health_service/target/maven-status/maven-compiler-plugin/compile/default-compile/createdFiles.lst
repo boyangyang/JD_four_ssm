@@ -1,0 +1,8 @@
+com\service\CheckItemService.class
+com\service\SetmealService.class
+com\service\CheckGroupService.class
+com\service\OrderSettingService.class
+com\service\impl\CheckItemServiceImpl.class
+com\service\impl\OrderSettingServiceimpl.class
+com\service\impl\CheckGroupServiceImpl.class
+com\service\impl\SetmealServiceimpl.class

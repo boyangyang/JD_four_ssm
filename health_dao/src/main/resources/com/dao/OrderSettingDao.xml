@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.OrderSettingDao">
+
+    <insert id="add" parameterType="orderSetting">
+        insert into t_ordersetting values
+        (null,#{orderDate},#{number},#{reservations})
+    </insert>
+
+    <update id="update" parameterType="orderSetting">
+        update t_ordersetting set number =#{number} where orderDate =#{orderDate,javaType=Date}
+    </update>
+
+    <select id="findOrderSettingByDate" parameterType="date" resultType="com.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate=#{date,javaType=Date}
+    </select>
+
+    <select id="findorderbymonth" parameterType="string" resultType="com.pojo.OrderSetting">
+        select * from t_ordersetting where orderDate between #{begin} and#{end}
+    </select>
+    <!--SELECT * FROM t_ordersetting WHERE orderDate LIKE '2019-08-%'-->
+
+    <update id="updateordernumber">
+        update t_t_ordersetting set number =#{number} where orderDate =#{date}
+    </update>
+</mapper>

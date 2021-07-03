@@ -1,0 +1,13 @@
+com\pojo\Setmeal.class
+com\pojo\OrderSetting.class
+com\pojo\PageResult.class
+com\pojo\CheckItem.class
+com\pojo\Order.class
+com\pojo\Role.class
+com\pojo\User.class
+com\pojo\CheckGroup.class
+com\pojo\Result.class
+com\pojo\Member.class
+com\pojo\Menu.class
+com\pojo\QueryPageBean.class
+com\pojo\Permission.class
