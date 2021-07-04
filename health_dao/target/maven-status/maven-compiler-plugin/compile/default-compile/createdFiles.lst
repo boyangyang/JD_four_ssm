@@ -1,4 +1,7 @@
-com\dao\SetmealDao.class
 com\dao\OrderSettingDao.class
+com\dao\PromissionDao.class
 com\dao\CheckItemDao.class
+com\dao\RoleDao.class
+com\dao\SetmealDao.class
+com\dao\UserDao.class
 com\dao\CheckGroupDao.class

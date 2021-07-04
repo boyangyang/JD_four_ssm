@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.RoleDao">
+
+    <resultMap id="role" type="role">
+        <collection property="permissions" column="id"
+                    select="com.dao.PromissionDao.findPermissionByRoleId"/>
+    </resultMap>
+
+    <select id="findRoleByUid" parameterType="int" resultMap="role">
+    select * from t_role r, t_user_role ur where ur.user_id =#{uid} and ur.role_id=r.id
+</select>
+</mapper>

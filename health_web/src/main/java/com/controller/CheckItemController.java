@@ -4,6 +4,7 @@ import com.common.MessageConstant;
 import com.pojo.*;
 import com.service.CheckItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class CheckItemController {
     private CheckItemService cs;
 
     @RequestMapping("/add")
+    @PreAuthorize("hasAuthority('CHECKITEM_ADD')")
     public Result add(@RequestBody CheckItem checkItem) {
         try {
             System.out.println("checkItem = " + checkItem.getAge());
@@ -29,6 +31,7 @@ public class CheckItemController {
     }
 
     @RequestMapping("/fingPage")
+    @PreAuthorize("hasAuthority('CHECKITEM_QUERY')")
     public PageResult fingPage(@RequestBody QueryPageBean queryPageBean) {
         PageResult pageResult = cs.pageQuery(
                 queryPageBean.getCurrentPage(),
@@ -39,6 +42,7 @@ public class CheckItemController {
     }
 
     @RequestMapping("/delete")
+    @PreAuthorize("hasAuthority('CHECKITEM_DELETE23498723482h3k4hkahdfkh234')")
     public Result delete(Integer id) {
 
         try {
@@ -52,6 +56,8 @@ public class CheckItemController {
     }
 
     @RequestMapping("/update")
+//    @PreAuthorize("hasAuthority('CHECKITEM_EDIT')")
+    @PreAuthorize("hasAuthority('CHECKITEM_EDIT')")
     public Result update(@RequestBody CheckItem checkItem) {
         int row = cs.update(checkItem);
 

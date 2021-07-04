@@ -21,7 +21,7 @@ public class QiNiuUtils {
     private static final String SECRETKEY = "KhQpNJFOQK29YhHvVBvSCdJ_rHU_HO4ZrLcEJl_8";
     // 对象仓库
     private static final String BUCKET = "01yangyang";
-    public static final String DOMAIN = "qvmhjy4nt.hd-bkt.clouddn.com";
+    public static final String DOMAIN = "https://qvmhjy4nt.hd-bkt.clouddn.com";
 
     public static void main(String[] args) {
         //uploadFile("C:\\Users\\Eric\\Desktop\\file\\timg.jpg","dlrb.jpg");
@@ -142,7 +142,7 @@ public class QiNiuUtils {
 
     private static UploadManager getUploadManager() {
         //构造一个带指定Zone对象的配置类
-        Configuration cfg = new Configuration(Zone.zone2());
+        Configuration cfg = new Configuration(Zone.zone0());
         //构建上传管理器
         return new UploadManager(cfg);
     }
@@ -151,6 +151,6 @@ public class QiNiuUtils {
         // 创建授权信息
         Auth auth = Auth.create(ACCESSKEY, SECRETKEY);
         // 创建操作某个仓库的管理器 zone2()代表是华南地区
-        return new BucketManager(auth, new Configuration(Zone.zone2()));
+        return new BucketManager(auth, new Configuration(Zone.zone0()));
     }
 }

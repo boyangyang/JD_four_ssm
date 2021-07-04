@@ -18,18 +18,18 @@ public class cleanImgJob {
     @Autowired
     private SetmealDao sl;
 
-    public void cleanImg() {
+    /*public void cleanImg() {
         List<String> qiniulist = QiNiuUtils.listFile();
         System.out.println("七牛上面的图片是：" + qiniulist);
 
-        /*List<String> dblist = sl.findAllImg();
+        List<String> dblist = sl.findAllImg();
         System.out.println("数据库里面的图片是：" + dblist);
 
         qiniulist.removeAll(dblist);
         System.out.println("剩下的要删除的图片是：" + qiniulist);
 
-        QiNiuUtils.removeFiles(qiniulist.toArray(new String[]{}));*/
-    }
+        QiNiuUtils.removeFiles(qiniulist.toArray(new String[]{}));
+    }*/
 
     /*public void clean7NiuJob() {
         log.info("开始执行清理7牛上垃圾图片任务!!!!!!!!");
@@ -37,7 +37,7 @@ public class cleanImgJob {
         List<String> imgIn7Niu = QiNiuUtils.listFile();
         log.info("七牛上有{}张图片", imgIn7Niu.size());
 
-       *//* List<String> imgInDB = sl.getImgs();
+        List<String> imgInDB = sl.getImgs();
         log.info("数据库上有{}张图片",imgInDB==null?0:imgInDB.size());
 
         imgIn7Niu.removeAll(imgInDB);
@@ -48,6 +48,6 @@ public class cleanImgJob {
 
         String[] imgNeed2Delete = imgIn7Niu.toArray(new String[]{});
         QiNiuUtils.removeFiles(imgNeed2Delete);
-        log.info("清理7牛上垃圾图片任务执行完毕....");*//*
+        log.info("清理7牛上垃圾图片任务执行完毕....");
     }*/
 }

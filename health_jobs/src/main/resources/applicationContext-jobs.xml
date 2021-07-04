@@ -9,8 +9,8 @@
 
     <bean id="jobDetail"
           class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-        <property name="targetObject" ref="cleanImgJob"/>
-        <property name="targetMethod" value="clean7NiuJob"/>
+        <!--<property name="targetObject" ref="cleanImgJob"/>
+        <property name="targetMethod" value="clean7NiuJob"/>-->
         <property name="concurrent" value="false"/>
     </bean>
 
