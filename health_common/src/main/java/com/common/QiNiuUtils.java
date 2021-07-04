@@ -21,7 +21,7 @@ public class QiNiuUtils {
     private static final String SECRETKEY = "KhQpNJFOQK29YhHvVBvSCdJ_rHU_HO4ZrLcEJl_8";
     // 对象仓库
     private static final String BUCKET = "01yangyang";
-    public static final String DOMAIN = "http://qvmhjy4nt.hd-bkt.clouddn.com/";
+    public static final String DOMAIN = "qvmhjy4nt.hd-bkt.clouddn.com";
 
     public static void main(String[] args) {
         //uploadFile("C:\\Users\\Eric\\Desktop\\file\\timg.jpg","dlrb.jpg");
